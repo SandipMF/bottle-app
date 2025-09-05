@@ -6,7 +6,6 @@ import LandingPage from "@/components/landing";
 import Navbar from "@/components/navbar";
 import Products from "@/components/products";
 import SpecialFeatures from "@/components/special-features";
-import Image from "next/image";
 
 export default function Home() {
   return (
