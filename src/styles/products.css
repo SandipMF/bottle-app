@@ -1,0 +1,89 @@
+.products-section {
+  min-height: 100vh; /* full screen height */
+  min-width: 100vw; /* full screen width */
+  padding: 60px 100px;
+  /* background: #000;  */
+  /* color: #fff; */
+  text-align: center;
+}
+
+.products-header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.products-header h2 {
+  font-size: 60;
+  /* margin-bottom: 10px; */
+  /* font-family: "Franklin Gothic Medium"; */
+  font-weight: 600;
+}
+
+.products-header p {
+  font-size: 24;
+  color: #000;
+  font-weight: normal;
+  /* font-family: "Franklin Gothic Medium"; */
+  /* background-color: #00dfd8; */
+}
+
+.view-more {
+  margin-top: 15px;
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+  justify-items: center;
+  /* background-color: #00dfd8; */
+  width: 100%;
+  padding: 0px;
+}
+
+.product-card {
+  /* background: #111; */
+  text-align: center;
+  width: 90%;
+}
+
+.product-image {
+  /* margin-bottom: 5px; */
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative; /* required for Image with fill */
+  width: 100%; /* takes full column width */
+  height: 400px;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.product-info h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+.learn-more {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+}

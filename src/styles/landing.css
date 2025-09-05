@@ -1,0 +1,107 @@
+.home {
+  position: relative;
+  text-align: center;
+  padding: 6rem 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+.bottle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* centers vertically & horizontally */
+}
+.bottle {
+  width: 200px;
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+}
+
+.cap {
+  width: 200px;
+  position: absolute;
+  /* top: -10px;  */
+  /* left:50%; */
+  top: -42%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid transparent;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  padding: 2px;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: white;
+  border-radius: 50%;
+}
+
+.title {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 600;
+  max-width: 800px;
+  margin: 5% auto;
+  margin-top: 8%;
+  z-index: 2;
+  /* background-color: #00c6ff; */
+}
+
+.subtitle {
+  margin-top: -3rem;
+  font-size: 30;
+  color: #555;
+  z-index: 2;
+  position: relative;
+  /* background-color: #00c6ff; */
+}
+
+.inq-btn {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Bottle Circles */
+.bottleCircle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftBottle {
+  position: absolute;
+  bottom: 110px;
+  left: 40px;
+  /* background-color: #555; */
+}
+
+.rightBottle {
+  position: absolute;
+  bottom: 110px;
+  right: 40px;
+}
