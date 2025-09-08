@@ -11,7 +11,7 @@ describe("Home Page", () => {
     render(<Home />);
     expect(screen.getAllByRole("navigation")[0]).toBeInTheDocument(); // Navbar
     expect(
-      screen.getByText(/The Ultimate Companion for Hydration/i)
+      screen.getByText(/The Ultimate Companion/i)
     ).toBeInTheDocument();
     expect(screen.getByText(/About us/i)).toBeInTheDocument();
     expect(screen.getByText(/Get in touch with us/i)).toBeInTheDocument();

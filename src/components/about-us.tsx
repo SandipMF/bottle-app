@@ -11,11 +11,17 @@ const AboutUs: FC = () => {
   ];
 
   return (
-    <section className="about-section" id="about">
+    <section
+      className="about-section"
+      id="about"
+      aria-labelledby="about-heading"
+    >
       <div className="container">
         {/* Left Section */}
         <div className="left">
-          <h2 className="title">About us</h2>
+          <h2 className="title" id="about-heading">
+            About us
+          </h2>
           <p className="sub-title">HEALTH, HAPPINESS, & SUSTAINABILITY</p>
           <p className="description">
             Lorem Ipsum is simply dummy text of the printing and typesetting

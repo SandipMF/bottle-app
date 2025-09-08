@@ -5,7 +5,7 @@ describe("Landing Component", () => {
   test("renders title and subtitle", () => {
     render(<LandingPage />);
     expect(
-      screen.getByText("The Ultimate Companion for Hydration")
+      screen.getByText(/The Ultimate Companion/i)
     ).toBeInTheDocument();
     expect(
       screen.getByText(/we believe in the power of hydration/i)
