@@ -1,3 +1,4 @@
+import React from "react";
 import AboutUs from "@/components/about-us";
 import ContactForm from "@/components/contact-form";
 import FAQ from "@/components/faq";

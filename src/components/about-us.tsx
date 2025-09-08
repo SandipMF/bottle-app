@@ -1,8 +1,8 @@
 "use client";
-import { FC } from "react";
+import React, { FC } from "react";
 import "../styles/about-us.css";
 
-const AboutUs: FC = () => {
+const AboutUs: React.FC = () => {
   const features = [
     "Wide Mouth Bottles To Clean Easily.",
     "Insulated Bottles For Hot And Cold Technology",
@@ -11,11 +11,17 @@ const AboutUs: FC = () => {
   ];
 
   return (
-    <section className="about-section" id="about">
+    <section
+      className="about-section"
+      id="about"
+      aria-labelledby="about-heading"
+    >
       <div className="container">
         {/* Left Section */}
         <div className="left">
-          <h2 className="title">About us</h2>
+          <h2 className="title" id="about-heading">
+            About us
+          </h2>
           <p className="sub-title">HEALTH, HAPPINESS, & SUSTAINABILITY</p>
           <p className="description">
             Lorem Ipsum is simply dummy text of the printing and typesetting
