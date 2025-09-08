@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "@/components/footer";
 import { fireEvent, render, screen } from "@testing-library/react";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import AboutUs from "@/components/about-us";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";

@@ -1,3 +1,4 @@
+import React from "react";
 import FAQ from "@/components/faq";
 import { fireEvent, render, screen } from "@testing-library/react";
 

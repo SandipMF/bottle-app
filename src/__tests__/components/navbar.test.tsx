@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "@/components/navbar";
 import { fireEvent, render, screen } from "@testing-library/react";
 describe("Navbar Component", () => {

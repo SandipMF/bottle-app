@@ -1,12 +1,11 @@
+import React from "react";
 import LandingPage from "@/components/landing";
 import { render, screen } from "@testing-library/react";
 
 describe("Landing Component", () => {
   test("renders title and subtitle", () => {
     render(<LandingPage />);
-    expect(
-      screen.getByText(/The Ultimate Companion/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/The Ultimate Companion/i)).toBeInTheDocument();
     expect(
       screen.getByText(/we believe in the power of hydration/i)
     ).toBeInTheDocument();

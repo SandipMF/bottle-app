@@ -1,8 +1,8 @@
 "use client";
-import { FC } from "react";
+import React, { FC } from "react";
 import "../styles/about-us.css";
 
-const AboutUs: FC = () => {
+const AboutUs: React.FC = () => {
   const features = [
     "Wide Mouth Bottles To Clean Easily.",
     "Insulated Bottles For Hot And Cold Technology",

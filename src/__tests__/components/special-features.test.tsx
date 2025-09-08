@@ -1,3 +1,4 @@
+import React from "react";
 import SpecialFeatures from "@/components/special-features";
 import { render, screen } from "@testing-library/react";
 
