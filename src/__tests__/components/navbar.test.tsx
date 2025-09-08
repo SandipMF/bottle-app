@@ -25,16 +25,19 @@ describe("Navbar Component", () => {
   test("calls scrollToSectionById when a nav button is clicked", () => {
     // mock scrollIntoView
     const mockScrollIntoView = vi.fn();
-    document.getElementById = vi.fn(
-      () =>
-        ({
-          scrollIntoView: mockScrollIntoView,
-        } as any)
-    );
+
+    // create a fake HTMLElement that includes scrollIntoView
+    const fakeElement = {
+      scrollIntoView: mockScrollIntoView,
+    } as unknown as HTMLElement;
+
+    vi.spyOn(document, "getElementById").mockReturnValue(fakeElement);
 
     render(<Navbar />);
-    fireEvent.click(screen.getByRole("button", { name: "Shop" }));
+    fireEvent.click(screen.getByRole("button", { name: /shop/i }));
 
     expect(mockScrollIntoView).toHaveBeenCalledWith({ behavior: "smooth" });
+
+    vi.restoreAllMocks();
   });
 });
