@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
         </ul>
 
         {/* Button */}
-        <button className="inqButton">INQUIRY NOW</button>
+        <button className="inqButton">Inquiry Now</button>
       </div>
     </nav>
   );
