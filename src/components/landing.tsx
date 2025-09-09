@@ -10,89 +10,107 @@ const LandingPage: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const [initalAnimationEnd, setInitalAnimationEnd] = useState(false);
 
-  const bottleY = useTransform(scrollYProgress, [0, 0.25], ["0%", "80%"]);
-  const capY = useTransform(scrollYProgress, [0, 0.05], ["-50%", "1%"]);
-  const bottleScale = useTransform(scrollYProgress, [0, 0.25], [1, 0.7]);
+  const capYMaxPsition = "-40%";
+  const capYMinPsition = "13%";
+
+  const baseYPosition = "20%";
+  const bottleY = useTransform(scrollYProgress, [0, 0.17], ["0%", "60%"]);
+  const capY = useTransform(
+    scrollYProgress,
+    [0, 0.05],
+    [capYMaxPsition, capYMinPsition]
+  );
+  const bottleScale = useTransform(scrollYProgress, [0, 0.25], [1, 1]);
 
   useEffect(() => {
     controls.start("visible");
   }, [controls]);
 
   return (
-    <motion.section
-      className="home"
-      id="home"
-      initial={{ scale: 0.5, opacity: 1 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-    >
-      <div className="circle"></div>
+    <motion.section className="home" id="home">
+      <motion.div transition={{ duration: 2, ease: "easeOut", delay: 2 }}>
+        <motion.div
+          className="circle-bg"
+          initial={{ scale: 0.7, opacity: 1 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 2 }}
+        >
+          <div className="circle"></div>
+        </motion.div>
 
-      <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-      >
-        <h1 className="title">
-          The Ultimate Companion
-          <br />
-          for Hydration
-        </h1>
+        <motion.div
+          initial={{ scale: 0.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut", delay: 3 }}
+        >
+          <h1 className="title">
+            The Ultimate Companion
+            <br />
+            for Hydration
+          </h1>
 
-        <p className="subtitle">
-          we believe in the power of hydration. <br />
-          Our mission is simple yet vital
-        </p>
+          <p className="subtitle">
+            we believe in the power of hydration. <br />
+            Our mission is simple yet vital
+          </p>
 
-        <button className="inq-btn">INQUIRY NOW</button>
+          <button className="inq-btn">INQUIRY NOW</button>
+        </motion.div>
+        {/* Left Bottle */}
+        <motion.div
+          className="leftBottle"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut", delay: 2 }}
+        >
+          <div className="bottleCircle">
+            <Image
+              src="/images/bottle2.png"
+              alt="Bottle Left"
+              width={80}
+              height={200}
+            />
+          </div>
+        </motion.div>
+
+        {/* Right Bottle */}
+        <motion.div
+          className="rightBottle"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut", delay: 2 }}
+        >
+          <div className="bottleCircle">
+            <Image
+              src="/images/bottle3.png"
+              alt="Bottle Right"
+              width={80}
+              height={200}
+            />
+          </div>
+        </motion.div>
       </motion.div>
-      {/* Left Bottle */}
-      <motion.div
-        className="leftBottle"
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-      >
-        <div className="bottleCircle">
-          <Image
-            src="/images/bottle2.png"
-            alt="Bottle Left"
-            width={80}
-            height={200}
-          />
-        </div>
-      </motion.div>
 
-      {/* Right Bottle */}
-      <motion.div
-        className="rightBottle"
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
-      >
-        <div className="bottleCircle">
-          <Image
-            src="/images/bottle3.png"
-            alt="Bottle Right"
-            width={80}
-            height={200}
-          />
-        </div>
-      </motion.div>
       <motion.div
         className="bottle-container"
-        style={{ y: bottleY, scale: bottleScale }}
+        initial={{ opacity: 1, scale: 1 }}
+        animate={controls}
+        style={{ y: bottleY, scale: 1 }}
       >
-        {/* Bottle Image */}
+        {/* Bottle Base Image */}
         <motion.img
           src="/images/bottle-base.png"
           alt="Bottle Base"
           className="bottle"
-          initial={{ opacity: 1, y: 0 }}
-          animate={controls}
-          variants={{
-            visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-          }}
+          initial={{ opacity: 1, y: 0, scale: 1 }}
+          animate={
+            !initalAnimationEnd
+              ? {
+                  y: baseYPosition, // open -> close
+                }
+              : { y: baseYPosition }
+          }
+          transition={{ duration: 1, ease: "easeOut", delay: 2 }}
         />
         {/* Cap Animation */}
         <motion.img
@@ -103,11 +121,11 @@ const LandingPage: React.FC = () => {
           animate={
             !initalAnimationEnd
               ? {
-                  y: "-50%", // open -> close
+                  y: capYMaxPsition, // open -> close
                 }
-              : { y: "-50%" }
+              : { y: capYMaxPsition }
           }
-          transition={{ duration: 3, ease: "easeOut", delay: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 2 }}
           style={initalAnimationEnd ? { y: capY } : {}}
           onAnimationComplete={() => setInitalAnimationEnd(true)}
         />
