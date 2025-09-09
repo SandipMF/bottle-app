@@ -41,7 +41,7 @@ const LandingPage: React.FC = () => {
         <motion.div
           initial={{ scale: 0.3, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeOut", delay: 3 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 2 }}
         >
           <h1 className="title">
             The Ultimate Companion
@@ -53,8 +53,16 @@ const LandingPage: React.FC = () => {
             we believe in the power of hydration. <br />
             Our mission is simple yet vital
           </p>
-
-          <button className="inq-btn">INQUIRY NOW</button>
+        </motion.div>
+        <motion.div initial={{ opacity: 1, scale: 1 }}>
+          <motion.button
+            className="inq-btn"
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 2 }}
+          >
+            INQUIRY NOW
+          </motion.button>
         </motion.div>
         {/* Left Bottle */}
         <motion.div
