@@ -29,6 +29,7 @@ const LandingPage: React.FC = () => {
   return (
     <motion.section className="home" id="home">
       <motion.div transition={{ duration: 2, ease: "easeOut", delay: 2 }}>
+        {/* circle */}
         <motion.div
           className="circle-bg"
           initial={{ scale: 0.7, opacity: 1 }}
@@ -38,6 +39,7 @@ const LandingPage: React.FC = () => {
           <div className="circle"></div>
         </motion.div>
 
+        {/* Heading & Sub-heading */}
         <motion.div
           initial={{ scale: 0.3, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -54,6 +56,7 @@ const LandingPage: React.FC = () => {
             Our mission is simple yet vital
           </p>
         </motion.div>
+        {/* INQ btn */}
         <motion.div initial={{ opacity: 1, scale: 1 }}>
           <motion.button
             className="inq-btn"
@@ -99,6 +102,7 @@ const LandingPage: React.FC = () => {
         </motion.div>
       </motion.div>
 
+      {/* Bottle with basc & cap */}
       <motion.div
         className="bottle-container"
         initial={{ opacity: 1, scale: 1 }}
