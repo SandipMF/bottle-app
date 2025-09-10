@@ -18,7 +18,7 @@ describe("Navbar Component", () => {
   test("renders inquiry button", () => {
     render(<Navbar />);
     expect(
-      screen.getByRole("button", { name: "INQUIRY NOW" })
+      screen.getByRole("button", { name: "Inquiry Now" })
     ).toBeInTheDocument();
   });
 
