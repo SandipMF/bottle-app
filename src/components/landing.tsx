@@ -10,7 +10,7 @@ const LandingPage: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const [initalAnimationEnd, setInitalAnimationEnd] = useState(false);
 
-  const capYMaxPsition = "-40%";
+  const capYMaxPsition = "-37%";
   const capYMinPsition = "13%";
 
   const baseYPosition = "20%";

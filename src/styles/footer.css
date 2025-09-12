@@ -72,3 +72,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 900px) {
+  .footer-nav {
+    margin-top: 40px;
+  }
+  .footer-socials {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

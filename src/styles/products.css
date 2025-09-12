@@ -2,7 +2,7 @@
   min-height: 100vh; /* full screen height */
   min-width: 100vw; /* full screen width */
   padding: 60px 100px;
-  /* background: #000;  */
+  /* background: #e00606; */
   /* color: #fff; */
   text-align: center;
 }
@@ -86,4 +86,30 @@
   font-weight: bold;
   cursor: pointer;
   width: 150px;
+}
+@media (max-width: 768px) {
+  .products-section {
+    height: auto;
+    width: 100vw;
+    padding: 10px 20px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-image {
+    height: 150px;
+  }
+}
+@media (max-width: 480px) {
+  .products-section {
+    height: auto;
+    width: 100vw;
+    padding: 10px 20px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-image {
+    height: 200px;
+  }
 }

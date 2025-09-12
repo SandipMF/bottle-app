@@ -105,3 +105,13 @@
   color: #e5e7eb;
   font-size: 30;
 }
+@media (max-width: 768px) {
+  .about-section {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    height: auto;
+  }
+}

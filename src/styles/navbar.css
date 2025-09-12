@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
+  /* background-color: cadetblue; */
 }
 
 .navbar div {
@@ -44,4 +45,55 @@
   cursor: pointer;
   height: 50px;
   width: 200px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .navbar div {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  .navLinks li button {
+    font-size: smaller;
+    font-weight: 400;
+  }
+  /* .inqButton {
+    height: 50px;
+    width: 100px;
+  } */
+  /* .navLinks li button {
+    font-size: 14;
+  } */
+  /* .navLinks {
+    gap: 1rem;
+  } */
+}
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .navbar div {
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  .navLinks li button {
+    font-size: 15;
+    font-weight: 200;
+  }
+  /* .inqButton {
+    height: 50px;
+    width: 100px;
+  } */
+  /* .navLinks li button {
+    font-size: 14;
+  } */
+  /* .navLinks {
+    gap: 1rem;
+  } */
 }

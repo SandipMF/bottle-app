@@ -4,33 +4,10 @@
   padding: 6rem 1rem;
   height: 90vh;
   width: 100vw;
-}
-.bottle-container {
-  z-index: 10;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* background-color: #555; */
-  top: -30%;
-}
-.bottle {
-  width: 25vh;
-  height: 80vh;
-  z-index: 5;
-  position: absolute;
-  top: 10;
   /* background-color: #0072ff; */
+  /* display: flex; */
 }
 
-.cap {
-  width: 25vh;
-  height: 100vh;
-  position: absolute;
-  z-index: 2;
-  /* background-color: #00c6ff; */
-}
 .circle-bg {
   position: absolute;
   top: 0px;
@@ -38,16 +15,19 @@
   height: 90vh;
   width: 100vw;
   background: transparent;
-  /* background-color: #555; */
+  background-color: #555;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
   width: 70vh;
   height: 70vh;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, 0%);
   border: 4px solid transparent;
   background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
   padding: 2px;
@@ -63,17 +43,20 @@
 
 .title {
   position: relative;
-  font-size: clamp(4rem, 2vw + 1rem, 6rem);
+  font-size: clamp(2rem, 3vw + 1rem, 6rem);
   font-weight: 500;
   max-width: 90vw;
-  margin: 3% auto;
-  /* margin-top: 8%; */
+  /* margin: 3% auto; */
+  margin-top: 3%;
+  margin-bottom: 0%;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
   /* background-color: #00c6ff; */
 }
 
 .subtitle {
-  margin-top: -3rem;
+  /* margin-top: 3rem; */
   font-size: 26;
   color: #555;
   z-index: 2;
@@ -94,6 +77,32 @@
   z-index: 2;
 }
 
+.bottle-container {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #555; */
+  top: -40%;
+}
+.bottle {
+  width: 25vh;
+  height: 80vh;
+  z-index: 5;
+  position: absolute;
+  top: 10;
+  /* background-color: #0072ff; */
+}
+
+.cap {
+  width: 25vh;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  /* background-color: #00c6ff; */
+}
 /* Bottle Circles */
 .bottleCircle {
   width: 160px;
@@ -116,4 +125,76 @@
   position: absolute;
   bottom: 110px;
   right: 40px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    /* padding: 6rem 5rem; */
+    /* display: flex; */
+    height: 100vw;
+    width: 100vw;
+  }
+  .circle-bg {
+    height: 90vw;
+    width: 100vw;
+  }
+  .circle {
+    width: 70vw;
+    height: 70vw;
+  }
+  .bottle-container {
+    height: 100vw;
+  }
+  .cap {
+    width: 25vw;
+    height: 100vw;
+  }
+  .bottle {
+    width: 25vw;
+    height: 80vw;
+  }
+  .leftBottle {
+    bottom: 40px;
+    left: 10px;
+  }
+  .rightBottle {
+    bottom: 40px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    /* padding: 6rem 5rem; */
+    /* display: flex; */
+    height: 100vw;
+    width: 100vw;
+  }
+  .circle-bg {
+    height: 90vw;
+    width: 100vw;
+  }
+  .circle {
+    width: 70vw;
+    height: 70vw;
+  }
+  .bottle-container {
+    height: 100vw;
+  }
+  .cap {
+    width: 25vw;
+    height: 100vw;
+  }
+  .bottle {
+    width: 25vw;
+    height: 80vw;
+  }
+  .leftBottle {
+    bottom: 40px;
+    left: 10px;
+  }
+  .rightBottle {
+    bottom: 40px;
+    right: 10px;
+  }
 }
