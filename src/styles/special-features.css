@@ -91,6 +91,11 @@
   .special-features-right {
     height: 100%;
   }
+  .special-features-right li {
+    gap: 10px;
+    margin: 10px 10;
+    font-size: 12px;
+  }
   .special-features-right li div {
     height: 50px;
     width: 50px;
