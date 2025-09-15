@@ -78,12 +78,13 @@ const LandingPage: React.FC = () => {
         >
           <div className="bottleCircle">
             <Image
+              // className="bottle-lf-image"
               src="/images/bottle2.png"
               alt="Bottle Left"
               // width={80}
               // height={200}
               fill
-              style={{ objectFit: "scale-down" }}
+              style={{ objectFit: "contain" }}
             />
           </div>
         </motion.div>
@@ -97,12 +98,13 @@ const LandingPage: React.FC = () => {
         >
           <div className="bottleCircle">
             <Image
+              // className="bottle-lf-image"
               src="/images/bottle3.png"
               alt="Bottle Right"
               // width={80}
               // height={200}
               fill
-              style={{ objectFit: "scale-down" }}
+              style={{ objectFit: "contain" }}
             />
           </div>
         </motion.div>
