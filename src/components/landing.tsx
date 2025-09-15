@@ -10,8 +10,8 @@ const LandingPage: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const [initalAnimationEnd, setInitalAnimationEnd] = useState(false);
 
-  const capYMaxPsition = "-40%";
-  const capYMinPsition = "13%";
+  const capYMaxPsition = "-37%";
+  const capYMinPsition = "15%";
 
   const baseYPosition = "20%";
   const bottleY = useTransform(scrollYProgress, [0, 0.17], ["0%", "60%"]);
@@ -29,6 +29,7 @@ const LandingPage: React.FC = () => {
   return (
     <motion.section className="home" id="home">
       <motion.div transition={{ duration: 2, ease: "easeOut", delay: 2 }}>
+        {/* circle */}
         <motion.div
           className="circle-bg"
           initial={{ scale: 0.7, opacity: 1 }}
@@ -38,32 +39,36 @@ const LandingPage: React.FC = () => {
           <div className="circle"></div>
         </motion.div>
 
-        <motion.div
-          initial={{ scale: 0.3, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 2 }}
-        >
-          <h1 className="title">
-            The Ultimate Companion
-            <br />
-            for Hydration
-          </h1>
-
-          <p className="subtitle">
-            we believe in the power of hydration. <br />
-            Our mission is simple yet vital
-          </p>
-        </motion.div>
-        <motion.div initial={{ opacity: 1, scale: 1 }}>
-          <motion.button
-            className="inq-btn"
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+        <div className="text-bg">
+          {/* Heading & Sub-heading */}
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 2 }}
           >
-            INQUIRY NOW
-          </motion.button>
-        </motion.div>
+            <h1 className="title">
+              The Ultimate Companion
+              <br />
+              for Hydration
+            </h1>
+
+            <p className="subtitle">
+              we believe in the power of hydration. <br />
+              Our mission is simple yet vital
+            </p>
+          </motion.div>
+          {/* INQ btn */}
+          <motion.div initial={{ opacity: 1, scale: 1 }}>
+            <motion.button
+              className="inq-btn"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 2 }}
+            >
+              INQUIRY NOW
+            </motion.button>
+          </motion.div>
+        </div>
         {/* Left Bottle */}
         <motion.div
           className="leftBottle"
@@ -73,10 +78,13 @@ const LandingPage: React.FC = () => {
         >
           <div className="bottleCircle">
             <Image
+              // className="bottle-lf-image"
               src="/images/bottle2.png"
               alt="Bottle Left"
-              width={80}
-              height={200}
+              // width={80}
+              // height={200}
+              fill
+              style={{ objectFit: "contain" }}
             />
           </div>
         </motion.div>
@@ -90,15 +98,19 @@ const LandingPage: React.FC = () => {
         >
           <div className="bottleCircle">
             <Image
+              // className="bottle-lf-image"
               src="/images/bottle3.png"
               alt="Bottle Right"
-              width={80}
-              height={200}
+              // width={80}
+              // height={200}
+              fill
+              style={{ objectFit: "contain" }}
             />
           </div>
         </motion.div>
       </motion.div>
 
+      {/* Bottle with basc & cap */}
       <motion.div
         className="bottle-container"
         initial={{ opacity: 1, scale: 1 }}

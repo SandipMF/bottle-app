@@ -57,7 +57,7 @@ export default function FAQ() {
           <div
             className="faq-content"
             style={{
-              maxHeight: activeId === faq.id ? "200px" : "0px",
+              maxHeight: activeId === faq.id ? "500px" : "0px",
             }}
           >
             <p>{faq.answer}</p>

@@ -26,8 +26,10 @@ const SpecialFeatures: React.FC = () => {
               <Image
                 src="/images/vacuum.png"
                 alt="Vacuum"
-                width={40}
-                height={40}
+                // width={40}
+                // height={40}
+                fill
+                style={{objectFit:"scale-down"}}
               />
             </div>
 
@@ -38,8 +40,10 @@ const SpecialFeatures: React.FC = () => {
               <Image
                 src="/images/fridge.png"
                 alt="Fridge"
-                width={40}
-                height={40}
+                // width={40}
+                // height={40}
+                fill
+                style={{objectFit:"scale-down"}}
               />
             </div>
             <span>Fridge Bottles & Jugs</span>
@@ -49,8 +53,10 @@ const SpecialFeatures: React.FC = () => {
               <Image
                 src="/images/borosilicate.png"
                 alt="Borosilicate"
-                width={40}
-                height={40}
+                // width={40}
+                // height={40}
+                fill
+                style={{objectFit:"scale-down"}}
               />
             </div>
             <span>Borosilicate Bottles</span>
@@ -60,8 +66,10 @@ const SpecialFeatures: React.FC = () => {
               <Image
                 src="/images/kettle.png"
                 alt="Kettle"
-                width={40}
-                height={40}
+                // width={40}
+                // height={40}
+                fill
+                style={{objectFit:"scale-down"}}
               />
             </div>
             <span>Kettles</span>
